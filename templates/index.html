@@ -1,0 +1,62 @@
+{% extends 'basic.html'%}
+{% block title %}Text Wrapper{% endblock %}
+{% block body %} 
+<style>
+    .borde__redius{
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+</style>
+
+
+<div id="alert" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Welcome To Text Wrapper</h4>
+    <p>You can Do magic with Text Wrapper</p>
+</div>
+
+
+
+<div class="container">
+    <form action="anlyze" method='post'> {% csrf_token %}
+        <div class=" form-group">
+            <label for="exampaleFormControlTextarea1">Enter Text in Text Wrapper Do The Magic</label>
+            <textarea name="text" class="form-control borde__redius" id="exampaleFormControlTextarea1" rows="6"></textarea>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="removepunc" id="flexSwitchCheckChecked">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Remove Punctuation</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="upper_text" id="flexSwitchCheckChecked1">
+            <label class="form-check-label" for="flexSwitchCheckChecked">UPPERCASE</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="newline" id="flexSwitchCheckChecked2">
+            <label class="form-check-label" for="flexSwitchCheckChecked">New Line Remover</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="space_remover" id="flexSwitchCheckChecked3">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Extra Space Remover</label>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary borde__redius">Analyze Text</button>
+
+        </div>
+
+
+    </form>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'basic.html'%}
+{% block title %}Analyzed{% endblock %}
+{% block body %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Sucess ! </h4>
+    <p>you text has been analyzed</p>
+</div>
+<div class="container">
+    <h1> Analalyzing  Your Input <h1>
+    <p>
+    <pre>{{analyzed_text}}</pre>
+    </p>
+</div>
+
+
+
+{% endblock %}
